@@ -6,7 +6,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    image: muhammmadabdullahabrar/devops:online_shop
+    image: muhammadabdullahabrar/devops:online_shop
     container_name: online_shop
     ports:
       - "3000:5173"
