@@ -38,14 +38,14 @@ pipeline {
                 docker_build("online_shop", "latest")
             }
         }
-        stage("Trivy Image Scan") {
-            steps {
-                trivy_image_scan("online_shop:latest")
-            }
-        }
         stage("Docker Tag") {
             steps {
                 docker_tag("online_shop", "muhammadabdullahabrar", "devops:online_shop")
+            }
+        }
+        stage("Trivy Image Scan") {
+            steps {
+                trivy_image_scan("muhammadabdullahabrar/devops:online_shop")
             }
         }
         stage("Docker Push"){
