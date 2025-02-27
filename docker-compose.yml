@@ -3,9 +3,10 @@ version: "3.8"
 services:
 
   online_shop:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: muhammmadabdullahabrar/devops:online_shop
     container_name: online_shop
     ports:
       - "3000:5173"
