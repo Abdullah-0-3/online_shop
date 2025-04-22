@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: online-shop-sot
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: feature/flux
+  url: https://github.com/Abdullah-0-3/online_shop
