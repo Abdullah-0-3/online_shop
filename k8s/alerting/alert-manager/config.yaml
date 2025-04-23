@@ -1,0 +1,22 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['discord_online_shop']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: 'discord-notifications'
+
+receivers:
+  - name: 'discord-notifications'
+    webhook_configs:
+      - url: 'https://discordapp.com/api/webhooks/1364548064181751899/pF4dew9VyaZbvyMAv-UYdmGE9AHK3rcC-PlceRjw9VidYfWmq2uu39HvJCfy3xmmVBXd'
+        send_resolved: true
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'namespace']
