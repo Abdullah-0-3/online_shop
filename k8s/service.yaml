@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: online-shop
+  namespace: online-shop
   labels:
     app: online-shop
 spec:

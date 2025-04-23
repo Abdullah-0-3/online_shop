@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: online-shop
+  namespace: online-shop
   labels:
     app: online-shop
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: online-shop
