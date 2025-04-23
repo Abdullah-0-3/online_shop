@@ -1,9 +1,0 @@
-grafana:
-  enabled: true
-  adminPassword: "admin"
-  service:
-    type: NodePort
-
-prometheus:
-  prometheusSpec:
-    serviceMonitorSelectorNilUsesHelmValues: false
